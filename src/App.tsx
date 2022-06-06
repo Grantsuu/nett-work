@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import { Link, Routes, Route } from 'react-router-dom';
+import { Container, Row, ThemeProvider } from 'react-bootstrap';
+import { Login } from 'views';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    useEffect(() => {
+        document.title = "Nett-work";
+    }, [])
+
+    return (
+        <ThemeProvider
+            breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <Container fluid className="p-0">
+                <Row className='m-0'>
+                    <h1 className='display-1 text-center'>Nett-work</h1>
+                </Row>
+                <Row className='m-0'>
+                    <Routes>
+                        <Route path="/" element={<div className='text-center'><Link to='/login'>Login</Link></div>} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/signup" element={<div>Signup</div>} />
+                    </Routes>
+                </Row>
+            </Container>
+        </ThemeProvider>
+    );
 }
 
 export default App;
