@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/nett-work/static/css/main.22ea66e6.css",
-    "main.js": "/nett-work/static/js/main.dd791a95.js",
+    "main.css": "/nett-work/static/css/main.cccf6de0.css",
+    "main.js": "/nett-work/static/js/main.8b90f8ad.js",
     "static/js/787.4319cf7b.chunk.js": "/nett-work/static/js/787.4319cf7b.chunk.js",
-    "static/media/logo.svg": "/nett-work/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/nett-work/index.html",
-    "main.22ea66e6.css.map": "/nett-work/static/css/main.22ea66e6.css.map",
-    "main.dd791a95.js.map": "/nett-work/static/js/main.dd791a95.js.map",
+    "main.cccf6de0.css.map": "/nett-work/static/css/main.cccf6de0.css.map",
+    "main.8b90f8ad.js.map": "/nett-work/static/js/main.8b90f8ad.js.map",
     "787.4319cf7b.chunk.js.map": "/nett-work/static/js/787.4319cf7b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22ea66e6.css",
-    "static/js/main.dd791a95.js"
+    "static/css/main.cccf6de0.css",
+    "static/js/main.8b90f8ad.js"
   ]
 }
