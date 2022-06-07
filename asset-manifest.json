@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nett-work/static/css/main.5f7bcae3.css",
-    "main.js": "/nett-work/static/js/main.8b90f8ad.js",
+    "main.js": "/nett-work/static/js/main.eb4bb1c0.js",
     "static/js/787.4319cf7b.chunk.js": "/nett-work/static/js/787.4319cf7b.chunk.js",
     "index.html": "/nett-work/index.html",
     "main.5f7bcae3.css.map": "/nett-work/static/css/main.5f7bcae3.css.map",
-    "main.8b90f8ad.js.map": "/nett-work/static/js/main.8b90f8ad.js.map",
+    "main.eb4bb1c0.js.map": "/nett-work/static/js/main.eb4bb1c0.js.map",
     "787.4319cf7b.chunk.js.map": "/nett-work/static/js/787.4319cf7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5f7bcae3.css",
-    "static/js/main.8b90f8ad.js"
+    "static/js/main.eb4bb1c0.js"
   ]
 }
