@@ -1,20 +1,12 @@
 import { Col, Container, Row } from 'react-bootstrap';
-import { LoginBox } from 'components';
-import { Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 function Login() {
     return (
         <Container fluid className='p-0 text-center'>
-            <Row className='m-0'>
-                <Col>
-                    <h1>Login</h1>
-                </Col>
-            </Row>
-            <Row className='m-0'>
-                <Col>
-                    <LoginBox />
-                    <Link to='/forgot'>Forgot password?</Link>
-                    <div>Need an account? <Link to='/signup'>Sign up</Link></div>
+            <Row className='m-0 w-25 mx-auto'>
+                <Col className='p-0'>
+                    <Outlet />
                 </Col>
             </Row>
         </Container>

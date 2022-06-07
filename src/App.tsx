@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
-import { Container, Row, ThemeProvider } from 'react-bootstrap';
-import { Login } from 'views';
+import { Col, Container, Row, ThemeProvider } from 'react-bootstrap';
+import { Login, Signup } from 'views';
+import { ForgotPasswordBox, LoginBox } from 'components';
 import './App.css';
 
 function App() {
@@ -18,11 +19,19 @@ function App() {
                     <h1 className='display-1 text-center'>Nett-work</h1>
                 </Row>
                 <Row className='m-0'>
-                    <Routes>
-                        <Route path="/" element={<div className='text-center'><Link to='/login'>Login</Link></div>} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/signup" element={<div>Signup</div>} />
-                    </Routes>
+                    <Col className='p-0'>
+                        <Routes>
+                            <Route path="/" element={<div className='text-center'><Link to='/login'>Login</Link></div>} />
+                            <Route path="login" element={<Login />}>
+                                <Route path='' element={<LoginBox/>} />
+                                <Route path='forgot' element={<ForgotPasswordBox />} />
+                            </Route>
+                            <Route path="signup" element={<Signup />} />
+                        </Routes>
+                    </Col>
+                </Row>
+                <Row className='m-0'>
+                    Footer
                 </Row>
             </Container>
         </ThemeProvider>

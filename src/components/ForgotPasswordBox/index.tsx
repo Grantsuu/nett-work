@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
-function LoginBox() {
+function ForgotPasswordBox() {
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = (event: any) => {
@@ -15,11 +15,11 @@ function LoginBox() {
         setValidated(true);
     };
 
-    return (
+    return(
         <Container fluid className='p-0'>
             <Row className='m-0'>
                 <Col className='p-0'>
-                    <h1>Login</h1>
+                    <h1>Forgot Password</h1>
                 </Col>
             </Row>
             <Row className='m-0 mb-2'>
@@ -36,20 +36,6 @@ function LoginBox() {
                                 Please provide a valid e-mail address.
                             </Form.Control.Feedback>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control
-                                required
-                                type="password"
-                                placeholder="Password"
-                            />
-                            <Form.Control.Feedback type="invalid">
-                                Please provide a valid password.
-                            </Form.Control.Feedback>
-                        </Form.Group>
-                        <Form.Group className="mb-3 text-start" controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label="Remember me" />
-                        </Form.Group>
                         <div className='d-grid'>
                             <Button variant="primary" type="submit">
                                 Submit
@@ -60,7 +46,7 @@ function LoginBox() {
             </Row>
             <Row className='m-0'>
                 <Col className='p-0'>
-                    <Link to='forgot'>Forgot password?</Link>
+                    <Link to='/login'>Back to Login</Link>
                     <div>Need an account? <Link to='/signup'>Sign up</Link></div>
                 </Col>
             </Row>
@@ -68,4 +54,4 @@ function LoginBox() {
     )
 }
 
-export default LoginBox;
+export default ForgotPasswordBox;
