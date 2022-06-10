@@ -5,6 +5,8 @@ import { Login, Signup } from 'views';
 import { ForgotPasswordBox, LoginBox } from 'components';
 import './App.css';
 
+// Mile high programing club :)
+
 function App() {
     useEffect(() => {
         document.title = "Nett-work";
