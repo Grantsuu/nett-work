@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 function Login() {
     return (
         <Container fluid className='p-0 text-center'>
-            <Row className='m-0 w-25 mx-auto'>
+            <Row className='m-0'>
                 <Col className='p-0'>
                     <Outlet />
                 </Col>

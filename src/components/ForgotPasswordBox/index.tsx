@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 function ForgotPasswordBox() {
@@ -19,14 +20,14 @@ function ForgotPasswordBox() {
         <Container fluid className='p-0'>
             <Row className='m-0'>
                 <Col className='p-0'>
-                    <h1>Forgot Password</h1>
+                    <h1  className='display-6'>Forgot Password<FontAwesomeIcon icon={['fas', 'unlock']} className='ms-2'/></h1>
                 </Col>
             </Row>
             <Row className='m-0 mb-2'>
                 <Col className='p-0'>
                     <Form noValidate validated={validated} onSubmit={handleSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label><FontAwesomeIcon icon={['fas', 'envelope']} className='me-1'/>Email address</Form.Label>
                             <Form.Control
                                 required
                                 type="email"
@@ -47,7 +48,6 @@ function ForgotPasswordBox() {
             <Row className='m-0'>
                 <Col className='p-0'>
                     <Link to='/login'>Back to Login</Link>
-                    <div>Need an account? <Link to='/signup'>Sign up</Link></div>
                 </Col>
             </Row>
         </Container>

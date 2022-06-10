@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 function Signup() {
@@ -16,17 +17,17 @@ function Signup() {
     };
 
     return (
-        <Container fluid className='p-0 w-25 text-center'>
+        <Container fluid className='p-0 text-center'>
             <Row className='m-0'>
                 <Col className='p-0'>
-                    <h1>Signup</h1>
+                    <h1 className='display-5'>Signup<FontAwesomeIcon icon={['fas', 'user-plus']} size='sm' className='ms-2'/></h1>
                 </Col>
             </Row>
             <Row className='m-0 mb-2'>
                 <Col className='p-0'>
                     <Form noValidate validated={validated} onSubmit={handleSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label><FontAwesomeIcon icon={['fas', 'envelope']} className='me-1'/>Email address</Form.Label>
                             <Form.Control
                                 required
                                 type="email"
@@ -37,7 +38,7 @@ function Signup() {
                             </Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label><FontAwesomeIcon icon={['fas', 'key']} className='me-1'/>Password</Form.Label>
                             <Form.Control
                                 required
                                 type="password"
@@ -48,18 +49,18 @@ function Signup() {
                             </Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPasswordConfirm">
-                            <Form.Label>Confirm Password</Form.Label>
+                            <Form.Label><FontAwesomeIcon icon={['fas', 'lock']} className='me-1'/>Confirm Password</Form.Label>
                             <Form.Control
                                 required
                                 type="password"
                                 placeholder="Confirm password"
                             />
                             <Form.Control.Feedback type="invalid" className="text-start">
-                                Passwords need to match.
+                                Passwords must match.
                             </Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicDisplayName">
-                            <Form.Label>Display Name</Form.Label>
+                            <Form.Label><FontAwesomeIcon icon={['fas', 'id-card']} className='me-1'/>Display Name</Form.Label>
                             <Form.Control 
                                 required
                                 type="text"
@@ -70,7 +71,7 @@ function Signup() {
                             </Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPhoneNumber">
-                            <Form.Label>Phone Number</Form.Label>
+                            <Form.Label><FontAwesomeIcon icon={['fas', 'phone']} className='me-1'/>Phone Number</Form.Label>
                             <Form.Control 
                                 required
                                 type="text"

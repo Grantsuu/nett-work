@@ -19,7 +19,7 @@ function App() {
                     <h1 className='display-1 text-center'>Nett-work</h1>
                 </Row>
                 <Row className='m-0'>
-                    <Col className='p-0'>
+                    <Col xs='12' sm='10' md='5' lg='4' xl='3' className='p-0 mx-auto'>
                         <Routes>
                             <Route path="/" element={<div className='text-center'><Link to='/login'>Login</Link></div>} />
                             <Route path="login" element={<Login />}>

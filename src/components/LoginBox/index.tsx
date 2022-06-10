@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 function LoginBox() {
@@ -19,14 +20,14 @@ function LoginBox() {
         <Container fluid className='p-0'>
             <Row className='m-0'>
                 <Col className='p-0'>
-                    <h1>Login</h1>
+                    <h1  className='display-5'>Login<FontAwesomeIcon icon={['fas', 'user']} size='sm' className='ms-2'/></h1>
                 </Col>
             </Row>
             <Row className='m-0 mb-2'>
                 <Col className='p-0'>
                     <Form noValidate validated={validated} onSubmit={handleSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label><FontAwesomeIcon icon={['fas', 'envelope']} className='me-1'/>Email address</Form.Label>
                             <Form.Control
                                 required
                                 type="email"
@@ -37,7 +38,7 @@ function LoginBox() {
                             </Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label><FontAwesomeIcon icon={['fas', 'key']} className='me-1'/>Password</Form.Label>
                             <Form.Control
                                 required
                                 type="password"
