@@ -2,10 +2,8 @@ import { useEffect } from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
 import { Col, Container, Row, ThemeProvider } from 'react-bootstrap';
 import { Login, Signup } from 'views';
-import { ForgotPasswordBox, LoginBox } from 'components';
+import { ForgotPasswordBox, LoginBox, ResetPasswordBox } from 'components';
 import './App.css';
-
-// Mile high programing club :)
 
 function App() {
     useEffect(() => {
@@ -27,6 +25,7 @@ function App() {
                             <Route path="login" element={<Login />}>
                                 <Route path='' element={<LoginBox/>} />
                                 <Route path='forgot' element={<ForgotPasswordBox />} />
+                                <Route path='reset' element={<ResetPasswordBox />} />
                             </Route>
                             <Route path="signup" element={<Signup />} />
                         </Routes>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
-function LoginBox() {
+function ResetPasswordBox() {
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = (event: any) => {
@@ -16,40 +16,37 @@ function LoginBox() {
         setValidated(true);
     };
 
-    return (
+    return(
         <Container fluid className='p-0'>
             <Row className='m-0'>
                 <Col className='p-0'>
-                    <h1  className='display-5'>Login<FontAwesomeIcon icon={['fas', 'user']} size='sm' className='ms-2'/></h1>
+                    <h1  className='display-6'>Reset Password<FontAwesomeIcon icon={['fas', 'lock-open']} className='ms-2'/></h1>
                 </Col>
             </Row>
             <Row className='m-0 mb-2'>
                 <Col className='p-0'>
                     <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label><FontAwesomeIcon icon={['fas', 'envelope']} className='me-1'/>Email address</Form.Label>
-                            <Form.Control
-                                required
-                                type="email"
-                                placeholder="Enter email"
-                            />
-                            <Form.Control.Feedback type="invalid">
-                                Please provide a valid e-mail address.
-                            </Form.Control.Feedback>
-                        </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label><FontAwesomeIcon icon={['fas', 'key']} className='me-1'/>Password</Form.Label>
                             <Form.Control
                                 required
                                 type="password"
-                                placeholder="Password"
+                                placeholder="Enter password"
                             />
                             <Form.Control.Feedback type="invalid">
                                 Please provide a valid password.
                             </Form.Control.Feedback>
                         </Form.Group>
-                        <Form.Group className="mb-3 text-start" controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label="Remember me" />
+                        <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
+                            <Form.Label><FontAwesomeIcon icon={['fas', 'lock']} className='me-1'/>Confirm Password</Form.Label>
+                            <Form.Control
+                                required
+                                type="password"
+                                placeholder="Confirm password"
+                            />
+                            <Form.Control.Feedback type="invalid">
+                                Passwords must match.
+                            </Form.Control.Feedback>
                         </Form.Group>
                         <div className='d-grid'>
                             <Button variant="primary" type="submit">
@@ -61,13 +58,11 @@ function LoginBox() {
             </Row>
             <Row className='m-0'>
                 <Col className='p-0'>
-                    <Link to='forgot'>Forgot password?</Link>
-                    <div>Need an account? <Link to='/signup'>Sign up</Link></div>
-                    <Link to='reset'>Reset</Link>
+                    <Link to='/login'>Back to Login</Link>
                 </Col>
             </Row>
         </Container>
     )
 }
 
-export default LoginBox;
+export default ResetPasswordBox;
