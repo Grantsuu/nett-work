@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
 import { Col, Container, Row, ThemeProvider } from 'react-bootstrap';
 import { Login, Signup } from 'views';
-import { ForgotPasswordBox, LoginBox, ResetPasswordBox } from 'components';
+import { ForgotPasswordBox, Footer, LoginBox, ResetPasswordBox } from 'components';
 import './index.css';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
                         <Routes>
                             <Route path="/" element={<div className='text-center'><Link to='/login'>Login</Link></div>} />
                             <Route path="login" element={<Login />}>
-                                <Route path='' element={<LoginBox/>} />
+                                <Route path='' element={<LoginBox />} />
                                 <Route path='forgot' element={<ForgotPasswordBox />} />
                                 <Route path='reset' element={<ResetPasswordBox />} />
                             </Route>
@@ -32,7 +32,7 @@ function App() {
                     </Col>
                 </Row>
                 <Row className='m-0'>
-                    Footer
+                    <Footer />
                 </Row>
             </Container>
         </ThemeProvider>

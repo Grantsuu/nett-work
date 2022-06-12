@@ -86,10 +86,8 @@ function Signup() {
                         </div>
                     </Form>
                 </Card.Body>
-                <Card.Footer className='text-center'>
-                    <Link to='/login'>Back to Login</Link>
-                </Card.Footer>
             </Card>
+            <div className='text-center'>Have an account? <Link to='/login'>Login</Link></div>
         </Container>
     )
 }
