@@ -1,4 +1,5 @@
+import App from './App';
 import Login from './Login';
 import Signup from './Signup';
 
-export {Login, Signup};
+export {App, Login, Signup};

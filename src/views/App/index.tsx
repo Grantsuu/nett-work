@@ -3,7 +3,7 @@ import { Link, Routes, Route } from 'react-router-dom';
 import { Col, Container, Row, ThemeProvider } from 'react-bootstrap';
 import { Login, Signup } from 'views';
 import { ForgotPasswordBox, LoginBox, ResetPasswordBox } from 'components';
-import './App.css';
+import './index.css';
 
 function App() {
     useEffect(() => {

@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 function Login() {
     return (
-        <Container fluid className='p-0 text-center'>
+        <Container fluid className='p-0'>
             <Row className='m-0'>
                 <Col className='p-0'>
                     <Outlet />

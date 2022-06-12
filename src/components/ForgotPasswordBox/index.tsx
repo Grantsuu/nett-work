@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Card, Container, Form, Row } from 'react-bootstrap';
 
 function ForgotPasswordBox() {
     const [validated, setValidated] = useState(false);
@@ -16,18 +16,16 @@ function ForgotPasswordBox() {
         setValidated(true);
     };
 
-    return(
+    return (
         <Container fluid className='p-0'>
-            <Row className='m-0'>
-                <Col className='p-0'>
-                    <h1  className='display-6'>Forgot Password<FontAwesomeIcon icon={['fas', 'unlock']} className='ms-2'/></h1>
-                </Col>
-            </Row>
-            <Row className='m-0 mb-2'>
-                <Col className='p-0'>
+            <Card bg='light' border='dark' text='dark'>
+                <Card.Header>
+                    <h1 className='display-5 text-center mb-1'>Forgot Password</h1>
+                </Card.Header>
+                <Card.Body>
                     <Form noValidate validated={validated} onSubmit={handleSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label><FontAwesomeIcon icon={['fas', 'envelope']} className='me-1'/>Email address</Form.Label>
+                            <Form.Label><FontAwesomeIcon icon={['fas', 'envelope']} className='me-1' />Email address</Form.Label>
                             <Form.Control
                                 required
                                 type="email"
@@ -43,13 +41,11 @@ function ForgotPasswordBox() {
                             </Button>
                         </div>
                     </Form>
-                </Col>
-            </Row>
-            <Row className='m-0'>
-                <Col className='p-0'>
+                </Card.Body>
+                <Card.Footer className='text-center'>
                     <Link to='/login'>Back to Login</Link>
-                </Col>
-            </Row>
+                </Card.Footer>
+            </Card>
         </Container>
     )
 }
